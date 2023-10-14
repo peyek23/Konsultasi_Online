@@ -30,12 +30,12 @@ class ImageAdapter(private val imageList: ArrayList<Int>, private val viewPager2
             when (position) {
                 0 -> {
                     // Posisi 0 (Dokter Umum): Buka LoginActivity
-                    val intent = Intent(context, login::class.java)
+                    val intent = Intent(context, daftar_umum::class.java)
                     context.startActivity(intent)
                 }
                 1 -> {
                     // Posisi 1 (Dokter Gigi): Buka SignUpActivity
-                    val intent = Intent(context, signup::class.java)
+                    val intent = Intent(context, daftar_umum::class.java)
                     context.startActivity(intent)
                 }
                 // Lanjutkan dengan posisi lainnya jika diperlukan

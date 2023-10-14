@@ -8,11 +8,15 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kalkulator_imt.databinding.ActivityDaftarFaskesBinding
 
 class daftar_faskes : AppCompatActivity() {
+
+    private lateinit var binding: ActivityDaftarFaskesBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_daftar_faskes)
+        binding = ActivityDaftarFaskesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         // Temukan ImageView berdasarkan ID
         val tandaTanyaImageView: ImageView = findViewById(R.id.tanda_tanya)
@@ -20,14 +24,14 @@ class daftar_faskes : AppCompatActivity() {
         // Tambahkan event click listener pada ImageView
         tandaTanyaImageView.setOnClickListener {
             // Munculkan dialog pop-up
-            showDialog("Klik untuk melihat faskes di Google Maps") // ** buat fitur lanjutan kalo diklik terbuka detail faskes
+            showDialog("Klik untuk melihat lokasi faskes") // ** buat fitur lanjutan kalo diklik terbuka detail faskes
         }
 
         // Temukan linear layout berdasarkan ID
-        val linearInduk1: LinearLayout = findViewById(R.id.linearinduk1)
+        val linear : LinearLayout = findViewById(R.id.linearinduk1)
 
         // Tambahkan event click listener pada linear layout
-        linearInduk1.setOnClickListener {
+        linear.setOnClickListener {
             // Tautan langsung Google Maps yang ingin Anda buka
             val googleMapsUrl = "https://maps.app.goo.gl/FrPokJSzqeFZmpeEA"
 
@@ -43,6 +47,7 @@ class daftar_faskes : AppCompatActivity() {
                 Toast.makeText(this, "Google map tidak tersedia !", Toast.LENGTH_SHORT).show()
             }
         }
+
     }
 
     private fun showDialog(message: String) {

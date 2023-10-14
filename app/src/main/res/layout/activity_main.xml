@@ -371,6 +371,45 @@
                 app:layout_constraintTop_toBottomOf="@+id/linear1"
                 app:srcCompat="@drawable/dash" />
 
+            <TextView
+                android:id="@+id/tvinformasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/bold"
+                android:text="Informasi"
+                android:textColor="@color/hitam"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dash4" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/Recycleview_berita"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginHorizontal="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.985"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvinformasi"/>
+
+            <ImageView
+                android:id="@+id/dash5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Recycleview_berita"
+                app:srcCompat="@drawable/dash" />
+
             <LinearLayout
                 android:id="@+id/linear6"
                 android:layout_width="wrap_content"
@@ -381,7 +420,7 @@
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dash4">
+                app:layout_constraintTop_toBottomOf="@id/dash5">
 
                 <TextView
                     android:id="@+id/tvtentangkami"
@@ -436,7 +475,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toEndOf="@+id/linear6"
-                app:layout_constraintTop_toBottomOf="@id/dash4"
+                app:layout_constraintTop_toBottomOf="@id/dash5"
                 app:layout_constraintVertical_bias="0.512"
                 app:srcCompat="@drawable/logo" />
 

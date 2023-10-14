@@ -25,17 +25,17 @@ class login : AppCompatActivity() {
             val emailtext = binding.email.editText?.text.toString()
             val passwordKey = binding.password.editText?.text.toString()
 
-            if (emailtext == "muhammad rizki" && passwordKey == "123456") {
+            if (emailtext == "khiie257@gmail.com" && passwordKey == "123456") {
                 // Jika login berhasil
-                Toast.makeText(applicationContext, "LOGIN SUKSES", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Login berhasil !", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this@login, MainActivity::class.java)
                 startActivity(intent)
             } else {
                 // Jika login gagal
-                Toast.makeText(applicationContext, "Login Failed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "Login gagal", Toast.LENGTH_SHORT).show()
                 val builder = AlertDialog.Builder(this@login)
                 builder.setMessage("Username atau Password Anda salah!")
-                    .setNegativeButton("Retry", null).create().show()
+                    .setNegativeButton("Coba lagi", null).create().show()
             }
         }
     }
